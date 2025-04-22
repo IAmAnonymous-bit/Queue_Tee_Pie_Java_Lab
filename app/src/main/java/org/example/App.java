@@ -9,6 +9,119 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        //System.out.println(new App().getGreeting());
+
+        CustomCutie c1 = new CustomCutie("Start", 1);
+        Puppy p1 = new Puppy();
+        Kitty k1 = new Kitty();
+        Puppy p2 = new Puppy();
+        Kitty k2 = new Kitty();
+        Puppy p3 = new Puppy();
+        Kitty k3 = new Kitty();
+        Puppy p4 = new Puppy();
+        Kitty k4 = new Kitty();
+        CustomCutie c2 = new CustomCutie("End", 100);
+        CustomCutie error = new CustomCutie("Should Not Work", 0);
+
+        QueueTee myQueueTee = new QueueTee();
+
+        try 
+        {
+            myQueueTee.dequeue();
+
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+
+        }
+
+        myQueueTee.enqueue(c1);
+        myQueueTee.enqueue(p1);
+        myQueueTee.enqueue(k1);
+        myQueueTee.enqueue(p2);
+        myQueueTee.enqueue(k2);
+        myQueueTee.enqueue(p3);
+        myQueueTee.enqueue(k3);
+        myQueueTee.enqueue(p4);
+        myQueueTee.enqueue(k4);
+        myQueueTee.enqueue(c2);
+
+        try 
+        {
+            myQueueTee.enqueue(error);
+
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+
+        }
+
+        Cutie m1 = myQueueTee.dequeue();
+        Cutie m2 = myQueueTee.dequeue();
+        Cutie m3 = myQueueTee.dequeue();
+        Cutie m4 = myQueueTee.dequeue();
+        Cutie m5 = myQueueTee.dequeue();
+        Cutie m6 = myQueueTee.dequeue();
+        Cutie m7 = myQueueTee.dequeue();
+        Cutie m8 = myQueueTee.dequeue();
+        Cutie m9 = myQueueTee.dequeue();
+        Cutie m10 = myQueueTee.dequeue();
+
+        try
+        {
+            myQueueTee.dequeue();
+
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+
+        }
+
+        System.out.println(m1.description() + " " + m1.cutenessRating());
+        System.out.println(m2.description() + " " + m2.cutenessRating());
+        System.out.println(m3.description() + " " + m3.cutenessRating());
+        System.out.println(m4.description() + " " + m4.cutenessRating());
+        System.out.println(m5.description() + " " + m5.cutenessRating());
+        System.out.println(m6.description() + " " + m6.cutenessRating());
+        System.out.println(m7.description() + " " + m7.cutenessRating());
+        System.out.println(m8.description() + " " + m8.cutenessRating());
+        System.out.println(m9.description() + " " + m9.cutenessRating());
+        System.out.println(m10.description() + " " + m10.cutenessRating());
+
+        QueueTee otherQueueTee = new QueueTee(5);
+
+        otherQueueTee.enqueue(c1);
+        otherQueueTee.enqueue(p1);
+        otherQueueTee.enqueue(k1);
+        otherQueueTee.enqueue(p2);
+        otherQueueTee.enqueue(c2);
+
+        try 
+        {
+            otherQueueTee.enqueue(error);
+
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+
+        }
+
+        Cutie o1 = otherQueueTee.dequeue();
+        Cutie o2 = otherQueueTee.dequeue();
+        Cutie o3 = otherQueueTee.dequeue();
+        Cutie o4 = otherQueueTee.dequeue();
+        Cutie o5 = otherQueueTee.dequeue();
+
+        try
+        {
+            otherQueueTee.dequeue();
+
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+
+        }
+
+        System.out.println(o1.description() + " " + o1.cutenessRating());
+        System.out.println(o2.description() + " " + o2.cutenessRating());
+        System.out.println(o3.description() + " " + o3.cutenessRating());
+        System.out.println(o4.description() + " " + o4.cutenessRating());
+        System.out.println(o5.description() + " " + o5.cutenessRating());
+
     }
 }
