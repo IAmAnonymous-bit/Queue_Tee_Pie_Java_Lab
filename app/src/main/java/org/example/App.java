@@ -25,6 +25,8 @@ public class App {
 
         QueueTee myQueueTee = new QueueTee();
 
+        System.out.println(myQueueTee.size());
+
         try 
         {
             myQueueTee.dequeue();
@@ -44,6 +46,8 @@ public class App {
         myQueueTee.enqueue(p4);
         myQueueTee.enqueue(k4);
         myQueueTee.enqueue(c2);
+
+        System.out.println(myQueueTee.size());
 
         try 
         {
@@ -74,6 +78,8 @@ public class App {
 
         }
 
+        System.out.println(myQueueTee.size());
+
         System.out.println(m1.description() + " " + m1.cutenessRating());
         System.out.println(m2.description() + " " + m2.cutenessRating());
         System.out.println(m3.description() + " " + m3.cutenessRating());
@@ -87,11 +93,15 @@ public class App {
 
         QueueTee otherQueueTee = new QueueTee(5);
 
+        System.out.println(myQueueTee.size());
+
         otherQueueTee.enqueue(c1);
         otherQueueTee.enqueue(p1);
         otherQueueTee.enqueue(k1);
         otherQueueTee.enqueue(p2);
         otherQueueTee.enqueue(c2);
+
+        System.out.println(myQueueTee.size());
 
         try 
         {
@@ -116,6 +126,8 @@ public class App {
             System.out.println(e);
 
         }
+
+        System.out.println(myQueueTee.size());
 
         System.out.println(o1.description() + " " + o1.cutenessRating());
         System.out.println(o2.description() + " " + o2.cutenessRating());
